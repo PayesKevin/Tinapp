@@ -1,7 +1,8 @@
 
   
 import 'package:flutter/material.dart';
-import 'package:tinsearch_projecto/container/tienda.dart';
+import 'package:tinsearch_projecto/container/home.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter UIs',
+      title: 'Flutter UI',
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
         accentColor: Colors.indigo
       ),
-      home: EcommerceTwoPage(),
+      home: HomePage(),
     );
   }
 }

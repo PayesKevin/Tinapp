@@ -1,175 +1,125 @@
 import 'package:flutter/material.dart';
 
-class ProfileTwoPage extends StatelessWidget {
-  static final String path = "lib/src/pages/profile/profile2.dart";
-  final List<Map> collections = [
-    {
-      "title":"Food joint",
-      "image":"assets/food/meal.jpg"
-    },
-    {
-      "title":"Photos",
-      "image":"assets/img/2.jpg"
-    },
-    {
-      "title":"Travel",
-      "image":"assets/travel/fishtail.jpg"
-    },
-    {
-      "title":"Nepal",
-      "image":"assets/travel/kathmandu2.jpg"
-    },
-  ];
+class ProfileThreePage extends StatelessWidget {
+  static final String path = "lib/src/pages/profile/profile3.dart";
+  final image = 'assets/img/2.jpg';
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          Container(
-            height: 200.0,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.indigo.shade300, Colors.indigo.shade500]
-              ),
+      backgroundColor: Colors.grey.shade300,
+      body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            SizedBox(
+              height: 250,
+              width: double.infinity,
+              child: Image.asset(image, fit: BoxFit.cover,),
             ),
-          ),
-          ListView.builder(
-            itemCount: 7,
-            itemBuilder: _mainListBuilder,
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _mainListBuilder(BuildContext context, int index) {
-    if(index==0) return _buildHeader(context);
-    if(index==1) return _buildSectionHeader(context);
-    if(index==2) return _buildCollectionsRow();
-    if(index==3) return Container(
-      color: Colors.white,
-      padding: EdgeInsets.only(left: 20.0, top: 20.0, bottom: 10.0),
-      child: Text("Most liked posts",
-        style: Theme.of(context).textTheme.title
-      )
-    );
-    return _buildListItem();
-  }
-
-  Widget _buildListItem() {
-    return Container(
-      color: Colors.white,
-      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(5.0),
-        child: Image.asset('assets/img/3.jpg', fit: BoxFit.cover),
-      ),
-    );
-  }
-
-  Container _buildSectionHeader(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      padding: EdgeInsets.symmetric(horizontal: 20.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text("Collection", style: Theme.of(context).textTheme.title,),
-          FlatButton(
-            onPressed: (){},
-            child: Text("Create new", style: TextStyle(color: Colors.blue),),
-          )
-        ],
-      ),
-    );
-  }
-
-  Container _buildCollectionsRow() {
-    return Container(
-      color: Colors.white,
-      height: 200.0,
-      padding: EdgeInsets.symmetric(horizontal: 10.0),
-      child: ListView.builder(
-        physics: BouncingScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        itemCount: collections.length,
-        itemBuilder: (BuildContext context, int index){
-          return Container(
-            margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-            width: 150.0,
-            height: 200.0,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(5.0),
-                    child: Image.asset(collections[index]['image'], fit: BoxFit.cover))
-                ),
-                SizedBox(height: 5.0,),
-                Text(collections[index]['title'], style: Theme.of(context).textTheme.subhead.merge(TextStyle(color: Colors.grey.shade600)))
-              ],
-            )
-          );
-        },
-      ),
-    );
-  }
-
-  Container _buildHeader(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 50.0),
-      height: 240.0,
-      child: Stack(
-        children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(top: 40.0, left: 40.0, right: 40.0, bottom: 10.0),
-            child: Material(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0)),
-              elevation: 5.0,
-              color: Colors.white,
+            Container(
+              margin: EdgeInsets.fromLTRB(16.0, 200.0, 16.0, 16.0),
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 50.0,),
-                  Text("Mebina Nepal", style: Theme.of(context).textTheme.title,),
-                  SizedBox(height: 5.0,),
-                  Text("UI/UX designer | Foodie | Kathmandu"),
-                  SizedBox(height: 16.0,),
+                  Stack(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.all(16.0),
+                        margin: EdgeInsets.only(top: 16.0),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(5.0)
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.only(left: 96.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Little Butterfly", style: Theme.of(context).textTheme.title,),
+                                  ListTile(
+                                    contentPadding: EdgeInsets.all(0),
+                                    title: Text("Product Designer"),
+                                    subtitle: Text("Kathmandu"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(child: Column(
+                                  children: <Widget>[
+                                    Text("285"),
+                                    Text("Likes")
+                                  ],
+                                ),),
+                                Expanded(child: Column(
+                                  children: <Widget>[
+                                    Text("3025"),
+                                    Text("Comments")
+                                  ],
+                                ),),
+                                Expanded(child: Column(
+                                  children: <Widget>[
+                                    Text("650"),
+                                    Text("Favourites")
+                                  ],
+                                ),),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 80,
+                        width: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          image: DecorationImage(
+                            image: AssetImage(image),
+                            fit: BoxFit.cover
+                          )
+                        ),
+                        margin: EdgeInsets.only(left: 16.0),
+                        ),
+                    ],
+                  ),
+
+                  SizedBox(height: 20.0),
                   Container(
-                    height: 40.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                    child: Column(
                       children: <Widget>[
-                        Expanded(
-                          child: ListTile(
-                            title: Text("302",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),),
-                            subtitle: Text("Posts".toUpperCase(),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 12.0) ),
-                          ),
+                        ListTile(title: Text("User information"),),
+                        Divider(),
+                        ListTile(
+                          title: Text("Email"),
+                          subtitle: Text("butterfly.little@gmail.com"),
+                          leading: Icon(Icons.email),
                         ),
-                        Expanded(
-                          child: ListTile(
-                            title: Text("10.3K",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),),
-                            subtitle: Text("Followers".toUpperCase(),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 12.0) ),
-                          ),
+                        ListTile(
+                          title: Text("Phone"),
+                          subtitle: Text("+977-9815225566"),
+                          leading: Icon(Icons.phone),
                         ),
-                        Expanded(
-                          child: ListTile(
-                            title: Text("120",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),),
-                            subtitle: Text("Following".toUpperCase(),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 12.0) ),
-                          ),
+                        ListTile(
+                          title: Text("Website"),
+                          subtitle: Text("https://www.littlebutterfly.com"),
+                          leading: Icon(Icons.web),
+                        ),
+                        ListTile(
+                          title: Text("About"),
+                          subtitle: Text("Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, illo repellendus quas beatae reprehenderit nemo, debitis explicabo officiis sit aut obcaecati iusto porro? Exercitationem illum consequuntur magnam eveniet delectus ab."),
+                          leading: Icon(Icons.person),
+                        ),
+                        ListTile(
+                          title: Text("Joined Date"),
+                          subtitle: Text("15 February 2019"),
+                          leading: Icon(Icons.calendar_view_day),
                         ),
                       ],
                     ),
@@ -177,20 +127,12 @@ class ProfileTwoPage extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Material(
-                elevation: 5.0,
-                shape: CircleBorder(),
-                child: CircleAvatar(
-                  radius: 40.0,
-                  backgroundImage: AssetImage('assets/img/1.jpg'),),
-              ),
-            ],
-          ),
-        ],
+            AppBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+            )
+          ],
+        ),
       ),
     );
   }
