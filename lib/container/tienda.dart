@@ -13,7 +13,7 @@ class EcommerceFivePage extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.grey,
-            blurRadius: 6.0,
+            blurRadius: 6.1,
           ),
         ],
         color: Colors.white,
