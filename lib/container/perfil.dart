@@ -40,7 +40,7 @@ class ProfileThreePage extends StatelessWidget {
                                   ListTile(
                                     contentPadding: EdgeInsets.all(0),
                                     title: Text("Product Designer"),
-                                    subtitle: Text("Kathmandu"),
+                                    subtitle: Text("Aldair"),
                                   ),
                                 ],
                               ),
@@ -98,12 +98,12 @@ class ProfileThreePage extends StatelessWidget {
                         Divider(),
                         ListTile(
                           title: Text("Email"),
-                          subtitle: Text("butterfly.little@gmail.com"),
+                          subtitle: Text("raldair7@gmail.com"),
                           leading: Icon(Icons.email),
                         ),
                         ListTile(
                           title: Text("Phone"),
-                          subtitle: Text("+977-9815225566"),
+                          subtitle: Text("+503ads5225566"),
                           leading: Icon(Icons.phone),
                         ),
                         ListTile(
