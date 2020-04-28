@@ -1,7 +1,7 @@
 import 'package:flutter/rendering.dart';
 
 class AppConstants {
-  static const appName = "Tinder for food";
+  static const appName = "Tinder Para Tiendas";
 }
 
 class AppTextStyles {
@@ -16,10 +16,10 @@ class AvailableImages {
   static const logo = 'assets/images/logo.png';
 
   static const woman = 'assets/images/woman.jpg';
-  static const burger = 'assets/images/burger.jpg';
-  static const cafe = 'assets/images/cafe.jpg';
-  static const gelato = 'assets/images/gelato.jpg';
-  static const tacos = 'assets/images/tacos.jpg';
+  static const dell = 'assets/images/dell.jpg';
+  static const hp = 'assets/images/hp.jpg';
+  static const apple = 'assets/images/apple.jpg';
+  static const tablet = 'assets/images/tablet.jpg';
 
   static const iphone = 'assets/images/iphone.png';
   static const navigate = 'assets/images/navigate.png';

@@ -1,35 +1,35 @@
-import 'resturant.dart';
+import 'tienda.dart';
 
 class Review {
   int id = 0;
-  int resturantId;
-  String resturantPhoto;
-  String resturantName;
-  String location = "Richmond";
-  String resturantType;
-  String date = "a week ago";
+  int tiendaId;
+  String tiendaPhoto;
+  String tiendaName;
+  String location = "Aldair";
+  String tiendaType;
+  String date = "Dos semanas";
   double rating;
   String content;
 
-  Review(this.resturantId, this.resturantPhoto, this.resturantName,
-      this.resturantType, this.rating, this.content);
+  Review(this.tiendaId, this.tiendaPhoto, this.tiendaName,
+      this.tiendaType, this.rating, this.content);
 }
 
 List<Review> reviews = [
   Review(
-    resturants[0].id,
-    resturants[0].photo,
-    resturants[0].name,
-    resturants[0].type,
+    Tiendas[0].id,
+    Tiendas[0].photo,
+    Tiendas[0].name,
+    Tiendas[0].type,
     5.0,
-    "Loved it! The staffs are friendly and they have amazing lunch deals.",
+    "Lo mejor que he encontrado! Me encanta.",
   ),
   Review(
-    resturants[0].id,
-    resturants[1].photo,
-    resturants[1].name,
-    resturants[1].type,
+    Tiendas[0].id,
+    Tiendas[1].photo,
+    Tiendas[1].name,
+    Tiendas[1].type,
     4.9,
-    "I come here everyday for my coffee! Love the staffs, they have such sweet hearts ❤️",
+    "Creo no he encontrado mejor tienda, con los mejores precios que esta",
   )
 ];
