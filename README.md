@@ -1,14 +1,18 @@
-# Flutter - Tinder para TIendas
+# Flutter -Tinder para Tiendas
+Un proyecto en flutter similar a tinder pero orientado para tiendas.
 
-Un Flutter UI con apariencia de de Tinder orientado a tiendas.
+
 
 
 
 ## Author(s)
-**Aldair Ramos & Kevin Payes**
+**Aldair y kevin**
 
 ## Getting Started
 
 **Note**: Make sure your Flutter environment is setup.
+
+
+
 
 
